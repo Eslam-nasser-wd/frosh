@@ -8,6 +8,8 @@ $(document).ready(function(){
   });
 });
 
+
+
 // POP UP
 $('.image, .bullding-in-map, .smallimages').click(function(){
   $('#up, .pop').fadeIn('slow')
