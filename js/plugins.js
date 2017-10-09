@@ -21,13 +21,22 @@ $('#up').click(function(){
 
 // This for to hide sidebar
 $('.sidebar .close').click(function(){
-  $('.sidebar').css('transform', 'translateX(600px)')
+    // $('.sidebar').css('transform', 'translateX(600px)') // 600px is a static number
+    $('.sidebar').css('transform', `translateX(100%)`)
 })
 $(document).ready(function(){
   var heightNav = $('nav').height(),
       heightWindow = $(window).height(),
       heightSide = heightWindow - heightNav
   $('.sidebar').css({'top': heightNav, 'height': heightSide})
+
+  // what if the window got resized?
+  $(window).resize(function(){
+      var heightNav = $('nav').height(),
+          heightWindow = $(window).height(),
+          heightSide = heightWindow - heightNav
+      $('.sidebar').css({'top': heightNav, 'height': heightSide})
+  })
 })
 // End Sidebar
 $(window).scroll(function(){
