@@ -182,6 +182,17 @@
     var house_4_import = new google.maps.Polygon(house_4_options);
     house_4_import.setMap(map);
 
+
+    // watch for click events
+    house_1_import.addListener('click', function() {
+      $('.sidebar').css('transform', 'translateX(0)')
+    });
+    house_2_import.addListener('click', function() {
+      $('.sidebar').css('transform', 'translateX(0)')
+    });
+    house_3_import.addListener('click', function() {
+      $('.sidebar').css('transform', 'translateX(0)')
+    });
     house_4_import.addListener('click', function() {
       $('.sidebar').css('transform', 'translateX(0)')
     });
