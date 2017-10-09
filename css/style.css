@@ -578,8 +578,8 @@ form {
         font-size: 18px;
         transform: rotateZ(-100deg); }
     .container .info-about-flat .provider .phone {
-      width: 48px;
-      height: 48px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background-color: #2ecc71;
       position: absolute;
