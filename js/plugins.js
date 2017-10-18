@@ -9,9 +9,8 @@ $(document).ready(function(){
 });
 
 
-
 // POP UP
-$('.image, .bullding-in-map, .smallimages').click(function(){
+$('.image, .back-layer div, .smallimages').click(function(){
   $('#up, .pop').fadeIn('slow')
   var srcImage = $(this).css('background-image')
   $('.pop').css('background-image', srcImage)
@@ -21,35 +20,7 @@ $('#up').click(function(){
 })
 // End pop
 
-// This for to hide sidebar
-$('.sidebar .close').click(function(){
-    // $('.sidebar').css('transform', 'translateX(600px)') // 600px is a static number
-    $('.sidebar').css('transform', `translateX(100%)`)
-})
-$(document).ready(function(){
-  var heightNav = $('nav').height(),
-      heightWindow = $(window).height(),
-      heightSide = heightWindow - heightNav
-  $('.sidebar').css({'top': heightNav, 'height': heightSide})
-
-  // what if the window got resized?
-  $(window).resize(function(){
-      var heightNav = $('nav').height(),
-          heightWindow = $(window).height(),
-          heightSide = heightWindow - heightNav
-      $('.sidebar').css({'top': heightNav, 'height': heightSide})
-  })
-})
-// End Sidebar
-$(window).scroll(function(){
-  var scrollTop = $(window).scrollTop()
-
-  // if( scrollTop > 50 ){
-  //   $('.btn-book').css({
-  //     'position': 'absolute',
-  //     'top': '0',
-  //     'right': '0',
-  //     'background-color': '$green-color'
-  //   })
-  // }
+$('.interface').click(function(){
+  $(this).css('top', '700px')
+  $('.back-layer').css('transform', 'translate(-50%, -50%) scale(1)')
 })
