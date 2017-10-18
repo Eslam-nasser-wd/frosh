@@ -41,6 +41,8 @@ nav
   right: 0
   z-index: 100
   transition: all 0.4s linear
+  &:hover
+    opacity: 1 !important
   .logo
     width: 100px
     height: 100px
@@ -82,36 +84,43 @@ nav
   top: 0
   transition: all .6s ease
   z-index: 10
-  .interface-image
+  cursor: pointer
+  background:
+    size: cover
+    position: center center
+  &:after
+    content: ''
+    display: block
     position: absolute
     top: 0
     left: 0
+    background-color: rgba(0, 0, 0, 0.3)
     width: 100%
     height: 100%
-  .logo
+    z-index: 2
+  .content
+    max-width: 600px
     position: absolute
     top: 50%
-    left: 400px
-    transform: translateY(-50%)
-    width: 100px
-    height: 100px
-    z-index: 5
-  .logo-name
-    width: 500px
-    height: 380px
-    position: absolute
-    top: 110px
-    left: 36%
+    left: 50%
+    transform: translate(-50%, -50%)
     z-index: 3
+    text-align: center
+    img
+      max-width: 100%
+    button
+      padding: 10px 20px
+      border: 0
+      background-color: $blue-color
+      color: $white-color
+      font-size: 22px
+      transition: .14s
+      &:hover
+        cursor: pointer
+        background-color: $blue-color / .9
 
-.layer-for-bg
-  position: absolute
-  top: 0
-  left: 0
-  background-color: rgba(0, 0, 0, 0.6)
-  width: 100%
-  height: 100%
-  z-index: 2
+
+
 
 .back-layer
   width: 860px
@@ -124,7 +133,7 @@ nav
   left: 50%
   transform: translate(-50%, -50%) scale(0)
   display: flex
-  cursor: pointer
+  // cursor: pointer
   transition: all 1s ease
   div
     width: 98%
@@ -132,6 +141,37 @@ nav
     margin: auto
     background-position: center
     background-size: cover
+  img.single-building
+    position: absolute
+    right: 0
+    top: 0
+    transition: .2s
+    &:hover
+      transform-origin: center center
+      transform: scale(1.2)
+      cursor: pointer
+    &.main-building
+      width: 410px
+      top: 18px
+      right: 80px
+      z-index: 3
+    &.right-bottom-building
+      width: 222px
+      top: 225px
+      right: 125px
+      z-index: 4
+    &.top-left-building
+      width: 140px
+      top: 98px
+      left: 165px
+      right: auto
+      z-index: 4
+    &.bottom-left-building
+      width: 271px
+      top: 163px
+      left: 164px
+      right: auto
+      z-index: 5
 
 
 .pop

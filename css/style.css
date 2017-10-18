@@ -42,6 +42,8 @@ nav {
   right: 0;
   z-index: 100;
   transition: all 0.4s linear; }
+  nav:hover {
+    opacity: 1 !important; }
   nav .logo {
     width: 100px;
     height: 100px;
@@ -82,37 +84,40 @@ nav {
   overflow: hidden;
   top: 0;
   transition: all 0.6s ease;
-  z-index: 10; }
-  .interface .interface-image {
+  z-index: 10;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center; }
+  .interface:after {
+    content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100%; }
-  .interface .logo {
+    height: 100%;
+    z-index: 2; }
+  .interface .content {
+    max-width: 600px;
     position: absolute;
     top: 50%;
-    left: 400px;
-    transform: translateY(-50%);
-    width: 100px;
-    height: 100px;
-    z-index: 5; }
-  .interface .logo-name {
-    width: 500px;
-    height: 380px;
-    position: absolute;
-    top: 110px;
-    left: 36%;
-    z-index: 3; }
-
-.layer-for-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  z-index: 2; }
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center; }
+    .interface .content img {
+      max-width: 100%; }
+    .interface .content button {
+      padding: 10px 20px;
+      border: 0;
+      background-color: #003364;
+      color: #fff;
+      font-size: 22px;
+      transition: 0.14s; }
+      .interface .content button:hover {
+        cursor: pointer;
+        background-color: #00396f; }
 
 .back-layer {
   width: 860px;
@@ -125,7 +130,6 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   display: flex;
-  cursor: pointer;
   transition: all 1s ease; }
   .back-layer div {
     width: 98%;
@@ -133,6 +137,37 @@ nav {
     margin: auto;
     background-position: center;
     background-size: cover; }
+  .back-layer img.single-building {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.2s; }
+    .back-layer img.single-building:hover {
+      transform-origin: center center;
+      transform: scale(1.2);
+      cursor: pointer; }
+    .back-layer img.single-building.main-building {
+      width: 410px;
+      top: 18px;
+      right: 80px;
+      z-index: 3; }
+    .back-layer img.single-building.right-bottom-building {
+      width: 222px;
+      top: 225px;
+      right: 125px;
+      z-index: 4; }
+    .back-layer img.single-building.top-left-building {
+      width: 140px;
+      top: 98px;
+      left: 165px;
+      right: auto;
+      z-index: 4; }
+    .back-layer img.single-building.bottom-left-building {
+      width: 271px;
+      top: 163px;
+      left: 164px;
+      right: auto;
+      z-index: 5; }
 
 .pop .dots-to-book {
   position: absolute;

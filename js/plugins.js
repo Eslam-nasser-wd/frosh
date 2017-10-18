@@ -10,17 +10,21 @@ $(document).ready(function(){
 
 
 // POP UP
-$('.image, .back-layer div, .smallimages').click(function(){
-  $('#up, .pop').fadeIn('slow')
-  var srcImage = $(this).css('background-image')
-  $('.pop').css('background-image', srcImage)
+$('[data-popupImage]').click(function(){
+    var attr = $(this).attr('data-popupImage')
+    $(`#up, .${attr}`).fadeIn('fast')
 })
+
 $('#up').click(function(){
   $('#up, .pop').fadeOut('fast')
 })
 // End pop
 
 $('.interface').click(function(){
-  $(this).css('top', '700px')
+  $(this).css('top', $(window).height())
+  $('nav').css('opacity', '1')
   $('.back-layer').css('transform', 'translate(-50%, -50%) scale(1)')
+})
+$(window).resize(function(){
+    $('.interface').css('top', $(window).height())
 })
