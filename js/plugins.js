@@ -1,5 +1,12 @@
 // Slider Image
 $(document).ready(function(){
+  $('.index-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 2500,
+    dots: false,
+    fade: true,
+    pauseOnHover: false
+  });
   $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 3000,
@@ -13,6 +20,12 @@ $(document).ready(function(){
 $('[data-popupImage]').click(function(){
     var attr = $(this).attr('data-popupImage')
     $(`#up, .${attr}`).fadeIn('fast')
+})
+
+$('.image, .smallimages').click(function(){
+  $('#up, .pop').fadeIn('slow')
+  var srcImage = $(this).css('background-image')
+  $('.pop').css('background-image', srcImage)
 })
 
 $('#up').click(function(){
