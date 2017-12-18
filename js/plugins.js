@@ -36,8 +36,15 @@ $('#up').click(function(){
 $('.interface').click(function(){
   $(this).css('top', $(window).height())
   $('nav').css('opacity', '1')
+})
+
+$('.overview').click(function(){
+  $(this).fadeOut('fast')
+  $('nav').css('opacity', '1')
   $('.back-layer').css('transform', 'translate(-50%, -50%) scale(1)')
 })
+
+
 $(window).resize(function(){
     $('.interface').css('top', $(window).height())
 })
